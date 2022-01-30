@@ -1,4 +1,1 @@
-export interface LastOrderReportLine{
-  customerId: string;
-  lastOrderDate: string;
-}
+export type LastOrderReportLine = Map<string,string>;
