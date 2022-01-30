@@ -1,5 +1,5 @@
 import { LastOrderReportLine } from './i-face-last-orders-report';
-import { Order } from './i-face-record';
+import { Order } from './i-face-order';
 import { reportReducer } from './report-reducer';
 import { reportSeed } from './report-seed';
 

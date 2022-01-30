@@ -1,4 +1,4 @@
-import { Order } from './i-face-record';
+import { Order } from './i-face-order';
 
 export const reportReducer = (report:Map<string,string>, order: Order): Map<string,string> =>{
   const {customerId,datePlaced} = order;

@@ -1,5 +1,5 @@
 import { reportReducer } from './report-reducer';
-import { Order } from './i-face-order';
+import { OrderLight } from './i-face-order-light';
 import { expect } from 'chai';
 
 const testInt = (upper = 42)=>Math.floor(upper* Math.random());
@@ -13,15 +13,12 @@ const nextDate = (datePlaced: string): string =>{
 };
 
 describe('Поведение редуктора отчета последнего заказа reportReducer', () => {
-  const getOrder = (): Order => ({
+  const getOrder = (): OrderLight => ({
     orderId: testInt(),
-    amountTotal: testInt(),
     customerId: testString(),
     datePlaced:testDate(),
     includeHandling: false,
     includeShipping: false,
-    itemsCount: testInt(),
-    taxTotal: testInt(),
   });
   it('использует данные из записи, когда встречает заказчика в первый раз',()=>{
     const order = getOrder();
